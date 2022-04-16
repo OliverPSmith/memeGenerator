@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, rgba(255, 213, 220, .6), rgba(255, 213, 220));
+    background-size: contain;
+    height: 100vh;
+}
+
+.meme-generator {
+    margin:  auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.meme-generator h1 {
+    margin: 2rem 0rem;
+}
+
+.meme-generator label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.meme-generator input {
+    width: 100%;
+    height: 2rem;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.meme-generator input:focus {
+    outline: none;
+}
+
+#meme {
+    width: 100%;
+}
+
+.pic-setting-buttons {
+    padding: 5px 15px;
+    margin-bottom: 1rem;
+
+    display: none;
+}
+
+#meme.invert {
+    filter: invert(100%);
+}
+
+#save {
+    padding: 15px 15px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(137, 229, 255, .8);
+}
+#save:hover {
+    background-color: rgba(137, 229, 255, 1);
+}
+
+@media only screen and (max-width: 600px) {
+    .meme-generator {
+        width: 90%;
+    }
+}
