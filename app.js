@@ -25,7 +25,7 @@ bottomTextInput.addEventListener('change', () => {
     updateMemeCanvas(canvas, image, topTextInput.value, bottomTextInput.value);
 });
 
-function updateMemeCanvas(canvas, image, topText, bottomText) {
+function updateMemeCanvas(canvas, image, topTextInput, bottomTextInput) {
    const ctx = canvas.getContext('2d');
    const width = image.width;
    const height = image.height;
@@ -35,6 +35,7 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
    // update canvas background
    canvas.width = width;
    canvas.height = height;
+   canvas.style.border = '8px ridge';
    ctx.drawImage(image, 0, 0);
 
    // prepare text
@@ -47,14 +48,16 @@ function updateMemeCanvas(canvas, image, topText, bottomText) {
 
    // add top text
    ctx.textBaseline = 'top';
-   ctx.strokeText(topText, width / 2, yOffSet);
-   ctx.fillText(topText, width / 2, yOffSet);
+   ctx.strokeText(topTextInput, width / 2, yOffSet);
+   ctx.fillText(topTextInput, width / 2, yOffSet);
 
    // add bottom text
    ctx.textBaseline = 'bottom';
-   ctx.strokeText(bottomText, width / 2, height - yOffSet);
-   ctx.fillText(bottomText, width / 2, height - yOffSet);
+   ctx.strokeText(bottomTextInput, width / 2, height - yOffSet);
+   ctx.fillText(bottomTextInput, width / 2, height - yOffSet);
 };
+
+
 
 // inverting the picture
 /*
@@ -73,4 +76,12 @@ saveBtn.addEventListener('click', () => {
     link.href = image;
     link.download = 'image.png';
     link.click();
+});
+
+// Clear Canvas
+
+const clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click', () => {
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
