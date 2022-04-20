@@ -9,28 +9,32 @@
 </head>
 <body>
 
-    <div class="meme-generator">
-
-        <h1>Meme Generator</h1>
-
-        <label>Select Image</label>
-        <input type="file" id="imageFileInput">
-
-        <label>Top Text</label>
-        <input type="text" id="topTextInput">
-
-        <label>Bottom Text</label>
-        <input type="text" id="bottomTextInput">
-
-        <button class="pic-setting-buttons" id="invert-filter">Invert</button>
-
-        <button id="save">SAVE</button>
-
-        <canvas id="meme"></canvas>
-
-    </div>
+  <main>
+        <header>
+            <h1>Welcome to the <span>Meme Generator</span></h1>
+        </header>
     
-
+        <div class="container">
+            <div class="container-left">
+                <label>Select Image</label>
+                <input type="file" id="imageFileInput" accept="image/jpeg, image/png, image/jpg">
+    
+                <label>Top Text</label>
+                <input type="text" id="topTextInput" maxlength="18">
+    
+                <label>Bottom Text</label>
+                <input type="text" id="bottomTextInput">
+    
+                <div class="buttons">
+                    <button id="save"><div>Save</div></button>
+                    <button id="clear"><div>Clear</div></button>
+                </div>
+            </div>
+            <div class="container-right">
+                <canvas id="meme"></canvas>
+            </div>
+        </div>
+    </main>
 <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
