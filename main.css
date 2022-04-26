@@ -12,7 +12,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
- /*   background-color: #0e8282;    */
     height: 100%;
     font-family: 'Press Start 2P', cursive;
 }
@@ -26,7 +25,6 @@ header h1 {
     background-color: #020081;
     padding: 2rem 6rem;
     color: #dfdfef;
-   /* box-shadow: 3px 2px 5px white;    */
     border: 4px solid #dfdfef;
     margin-bottom: 2rem;
 }
@@ -86,13 +84,8 @@ button:hover {
     background-color: #e2e2e2;
 }
 
-button:hover div {
-    border: 1px dashed;
-    border-radius: 3px;
-}
-
 button div {
-    border: 1px dashed;
+    border: 1px dashed black;
     border-radius: 3px;
     width: 95%;
     height: 90%;
@@ -105,7 +98,6 @@ button div {
 
 .container-right {
     width: 20%;
-  /*  background-color: red;    */
     display: flex;
     justify-content: center;
 }
@@ -114,8 +106,6 @@ canvas {
     max-height: 500px;
     max-width: 500px;
     object-fit: contain;
-  /*  border: 12px ridge;   */
-
 }
 
 
